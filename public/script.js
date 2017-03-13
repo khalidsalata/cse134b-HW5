@@ -13,17 +13,21 @@ var mobile = "";
 var disableScroll = false;
 var home = document.getElementById("homepage-container");
 var nextTime = 0;
+var snackbar = document.getElementById("snackbar");
 
 //Global user variable
 var user = firebase.auth().currentUser;
 var logout = document.getElementById("logout");
+var userShow = document.getElementById("user");
 firebase.auth().onAuthStateChanged(function(users) {
   user = users;
   if (users) {
     logout.classList.remove("hidden");
-    
+    userShow.classList.remove("hidden");
+    userShow.innerHTML = user.email;
   } else {
     logout.classList.add("hidden");
+    userShow.classList.add("hidden");
   }
 });
 
@@ -103,6 +107,9 @@ loginSubmit.onclick = function() {
         window.alert(errorMessage);
     }).then( function(){ 
         $("#loginModal").modal('hide'); 
+        snackbar.className = "show";
+        snackbar.innerHTML = "Logged in! Welcome back " + user.email;
+        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
     });
 };
 
@@ -117,7 +124,12 @@ registerSubmit.onclick = function() {
         var errorMessage = error.message;
 
         window.alert(errorMessage);
-    }).then( function(){ $("#registerModal").modal('hide'); });
+    }).then( function(){ 
+    	$("#registerModal").modal('hide'); 
+    	snackbar.className = "show";
+        snackbar.innerHTML = "Registered! Now you can log in!";
+        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+    });
 };
 
 // login with Google
@@ -128,7 +140,7 @@ googleLogin.onclick = function() {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         // The signed-in user info.
-        var user = result.user;
+        user = result.user;
         // ...3
     }).catch(function(error) {
         // Handle Errors here.
@@ -140,7 +152,10 @@ googleLogin.onclick = function() {
         var credential = error.credential;
         // ...
     }).then( function(){ 
-        $("#loginModal").modal('hide'); 
+        $("#loginModal").modal('hide');
+        snackbar.className = "show";
+        snackbar.innerHTML = "Logged in! Welcome back " + user.email;
+        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000); 
     });
 };
 
@@ -246,6 +261,9 @@ $("#imageModal").on('show.bs.modal', function(e) {
 			}
 		}
 		$("#imageModal").modal('hide');
+		snackbar.className = "show";
+        snackbar.innerHTML = imgInfo.imageName + " is gone forever!";
+        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 	}
 
 	//Edit an image
@@ -353,6 +371,9 @@ $("#imageModal").on('show.bs.modal', function(e) {
                 $("#imageModal").modal('hide');			
     		});
         }
+        snackbar.className = "show";
+        snackbar.innerHTML = "Changes to " + titleField + " have been saved!";
+        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 	}
 });
 
@@ -379,6 +400,7 @@ $("#loginModal").on('hide.bs.modal', function(){
 	for(var i = 0; i < inputs.length; i++){
 		inputs[i].value = "";
 	}
+
 });
 
 //Empty register modal fields when hidden
@@ -470,6 +492,9 @@ changesBtn.onclick = function() {
 			if(home.childNodes.length <= 1){
 				$("#loadMore").prop("disabled", true);
 			}
+			snackbar.className = "show";
+	        snackbar.innerHTML = titleField + " has been added. Good work!";
+	        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 		});
 	}
 }
