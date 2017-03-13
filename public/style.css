@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e89da8;
+}
+
+.topnav li {
+    float: left;
+    padding: 14px 16px;
+}
+
+.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.topnav li a:hover {
+    background-color: #111;
+}
+
+.topnav #search {
+    float: right;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    background-image: url('floralbg.jpg');
+    margin-bottom: 30px;
+}
+
+#opaque {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#homepage-container {
+    width: 90vw;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    #homepage-container .homepage-image {
+        position: relative;
+        width: 100vw;
+        height: 100vw;
+        overflow: hidden;
+        float: left;
+        display: block;
+        background-color: #e89da8;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    #homepage-container .homepage-image {
+        position: relative;
+        width: 24vw;
+        height: 24vw;
+        overflow: hidden;
+        float: left;
+        display: block;
+        background-color: #e89da8;
+        margin: 0 3vw;
+        margin-bottom: 30px;
+    }
+}
+
+.homepage-image:hover {
+    opacity: 0.5;
+}
+
+#homepage-container img {
+    width: 100%;
+}
+
+.buttons {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buttons button {
+    margin: 20px;
+    display: inline-block;
+}
+
+.form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.fg-container {
+    background-color: #e89da8;
+}
+
+.searchitem {
+    overflow: hidden;
+    height: 60%;
+    border: 5px solid black;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.searchitemimage,
+.searchitemdetails {
+    float: left;
+}
+
+.searchitemimage {
+    width: 40%;
+}
+
+.searchitemdetails {
+    width: 55%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.action-btns {
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+}
+
+.action-btns img {
+    width: 10%;
+}
+
+#imgDetails {
+    float: left;
+    width: 50%;
+}
+
+.modal-body,
+#infoBody {
+    overflow: hidden;
+}
+
+#editView {
+    border-style: outset;
+    padding: 3%;
+}
+
+.modal-body img {
+    display: inline;
+    width: 50%;
+}
+
+#editView p {
+    float: left;
+}
+
+#editView input {
+    float: right;
+}
+
+#sfwRadios input {
+    float: none;
+}
+
+#sfwRadios {
+    float: right;
+}
+
+#registerPassword,
+#loginPassword {
+    -webkit-text-security: disc;
+}
+
+#logout {
+    float: right;
+}
+
+#loadMore{
+    margin-left: 45%;
+    margin-bottom: 3%;
+}
+
+
+/*# sourceMappingURL=style.css.map */

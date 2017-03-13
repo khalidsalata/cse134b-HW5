@@ -1,0 +1,16 @@
+[{
+    "image-name": "Meme Wall",
+    "image-type": "jpg",
+    "image-source": "img/memewall.jpg"
+},
+{
+    "image-name": "Take A Knee",
+    "image-type": "jpg",
+    "image-source": "img/takeaknee.jpg"
+},
+{
+    "image-name": "White Tiger",
+    "image-type": "jpg",
+    "image-source": "img/whitetiger.jpg"
+}
+]
