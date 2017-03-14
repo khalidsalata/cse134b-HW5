@@ -248,6 +248,9 @@ $("#imageModal").on('show.bs.modal', function(e) {
             return;
         }
         if(imgInfo){
+            if(!confirm("Are you sure you want to delete " + imageInfo.imageName + "?")){
+                return;
+            }
 			var link = imgInfo.storageLink;
 			database.ref("/images").child(imageData).remove();
 			storage.ref(link).delete();
