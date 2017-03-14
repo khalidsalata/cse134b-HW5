@@ -39,7 +39,7 @@ function getImages() {
     var startRef = database.ref("/images");
 
     startRef.orderByChild("time").limitToFirst(7).once('value', function(snapshot){
-        console.log("updating main list");
+        // console.log("updating main list");
         while(home.hasChildNodes()){
             home.removeChild(home.lastChild);
         }
@@ -357,7 +357,7 @@ $("#imageModal").on('show.bs.modal', function(e) {
             })});
         }
         else{
-            console.log("No infile update");
+            // console.log("No infile update");
     	    var imgRef = database.ref("/images");
         	imgRef.child(titleField).update({
     	        imageName: titleField,
@@ -396,7 +396,7 @@ $("#imageModal").on('hide.bs.modal', function(){
 //Empty login modal fields when hidden
 $("#loginModal").on('hide.bs.modal', function(){
 	var inputs = this.getElementsByTagName("input");
-	console.log(inputs);
+	// console.log(inputs);
 	for(var i = 0; i < inputs.length; i++){
 		inputs[i].value = "";
 	}
@@ -406,7 +406,7 @@ $("#loginModal").on('hide.bs.modal', function(){
 //Empty register modal fields when hidden
 $("#registerModal").on('hide.bs.modal', function(){
     var inputs = this.getElementsByTagName("input");
-    console.log(inputs);
+    // console.log(inputs);
     for(var i = 0; i < inputs.length; i++){
         inputs[i].value = "";
     }
