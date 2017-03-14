@@ -156,6 +156,10 @@ header {
     margin-right: 20px;
 }
 
+#imgDetails {
+    word-wrap: break-word;
+}
+
 .modal-body,
 #infoBody {
     overflow: hidden;
