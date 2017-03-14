@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #e89da8;
+    background-color: lightblue;
+    /* border-bottom: 1px solid black; */
 }
 
 .topnav li {
@@ -42,12 +43,13 @@ p {
 header {
     text-align: center;
     padding: 30px 0;
-    background-image: url('floralbg.jpg');
-    margin-bottom: 30px;
+    /* background-image: url('floralbg.jpg'); */
+    /* margin-bottom: 30px; */
+    /* background: dimgrey; */
 }
 
 #opaque {
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     width: 70%;
     margin: 0 auto;
     padding: 20px;
