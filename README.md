@@ -4,7 +4,7 @@ Final Push, Art You Find In Bathrooms
 Demo link: 
 <http://cse-134b-hw4.firebaseapp.com>
 
-#Code Architecture
+# Code Architecture
 index.html- includes hidden modals and empty snackbar div; minified code
 index-unpackage.html- un-minified code for readability
 manifest.json- Manifest used for building PWA
