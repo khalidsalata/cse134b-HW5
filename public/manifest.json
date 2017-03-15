@@ -2,6 +2,7 @@
   "short_name": "AYFIB",
   "name": "Art You Find In Bathrooms",
   "background_color": "lightblue",
+  "theme_color": "lightblue",
   "icons": [
     {
       "src": "launcher-icon-1x.png",

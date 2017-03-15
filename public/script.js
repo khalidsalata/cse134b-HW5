@@ -174,6 +174,7 @@ function createImgTag(name, link, home, toFront) {
     	newImg.setAttribute("data-toggle", "modal");
     	newImg.setAttribute("data-target", "#imageModal");
     	newImg.setAttribute("data-imgData", name);
+        newImg.setAttribute("alt", name);
 
     	var newDiv = document.createElement("div");
     	newDiv.className = "homepage-image";
