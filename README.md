@@ -18,3 +18,11 @@ Demo link:
 2. Removing our background header image for faster first view
 3. Creating lighter, reduced resolution images for mobile users to view
 4. Included Manifest to make a more seamless progressive web app
+
+## Looking Forward, Some More Todo’s Beyond This Class:
+1. TODO: Add a Service Worker for a better user experience & lightning fast page loads
+2. TODO: Enforce chronological ordering of images on the home screen
+3. TODO: Find better way to reduce image resolution without losing quality
+4. TODO: Use client-side compression/decompression of images to reduce network utilization
+5. TODO: More attractive user experience without performance drawback
+
